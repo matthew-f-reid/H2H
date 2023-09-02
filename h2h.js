@@ -21,14 +21,17 @@ function draw() {
     frameRate(10);
     background(220);
     if (!focused) {
+        noLoop();
         //Draw cirlces
         for (let i = 0; i < numObjects; i++){
             strokeWeight(5);
             fill(random(254),random(254),random(254));
             ellipse(random(windowWidth-1),random(windowHeight-1),random(500));
         }
+        //Pause
         pause();
     }else {
+        loop();
         //Draw rectangles
         for (let i = 0; i < numObjects; i++){
             strokeWeight(5);
